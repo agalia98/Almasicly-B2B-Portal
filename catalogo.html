@@ -1,1 +1,587 @@
-
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo Prodotti - AlmaSicily Horeca B2B</title>
+    <meta name="description" content="Esplora il catalogo completo di prodotti siciliani autentici di AlmaSicily per il settore Ho.Re.Ca.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/almasicily-logo.png" alt="AlmaSicily Logo">
+                    </a>
+                </div>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <form action="search.html" method="get">
+                            <input type="text" name="query" placeholder="Cerca prodotti...">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="user-actions">
+                        <a href="login.html" class="btn btn-outline"><i class="fas fa-user"></i> Accedi</a>
+                        <a href="cart.html" class="btn btn-cart"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                    </div>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <nav class="main-navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="has-submenu">
+                        <a href="catalogo.html">Catalogo <i class="fas fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="categoria.html?cat=vini">Vini</a></li>
+                            <li><a href="categoria.html?cat=oli">Oli</a></li>
+                            <li><a href="categoria.html?cat=conserve">Conserve</a></li>
+                            <li><a href="categoria.html?cat=pasta">Pasta</a></li>
+                            <li><a href="categoria.html?cat=dolci">Dolci</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="promozioni.html">Promozioni</a></li>
+                    <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Breadcrumb -->
+        <div class="breadcrumb-container">
+            <div class="container">
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Catalogo</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Catalogo Section -->
+        <section class="catalogo-section">
+            <div class="container">
+                <div class="catalogo-header">
+                    <h1>Catalogo Prodotti</h1>
+                    <p>Esplora la nostra selezione di eccellenze siciliane per il settore Ho.Re.Ca.</p>
+                </div>
+                
+                <div class="catalogo-layout">
+                    <!-- Sidebar con filtri -->
+                    <aside class="catalogo-sidebar">
+                        <div class="filter-widget">
+                            <h3>Categorie</h3>
+                            <ul class="filter-list">
+                                <li>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" value="vini">
+                                        <span class="checkmark"></span>
+                                        Vini <span class="count">(42)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" value="oli">
+                                        <span class="checkmark"></span>
+                                        Oli d'Oliva <span class="count">(15)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" value="conserve">
+                                        <span class="checkmark"></span>
+                                        Conserve <span class="count">(28)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" value="pasta">
+                                        <span class="checkmark"></span>
+                                        Pasta <span class="count">(18)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" value="dolci">
+                                        <span class="checkmark"></span>
+                                        Dolci <span class="count">(23)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" value="liquori">
+                                        <span class="checkmark"></span>
+                                        Liquori <span class="count">(12)</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="filter-widget">
+                            <h3>Prezzo</h3>
+                            <div class="price-filter">
+                                <div class="price-inputs">
+                                    <input type="number" id="min-price" placeholder="Min €" min="0">
+                                    <span class="separator">-</span>
+                                    <input type="number" id="max-price" placeholder="Max €" min="0">
+                                </div>
+                                <button class="btn-filter">Applica</button>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-widget">
+                            <h3>Provenienza</h3>
+                            <ul class="filter-list">
+                                <li>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" value="palermo">
+                                        <span class="checkmark"></span>
+                                        Palermo
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" value="catania">
+                                        <span class="checkmark"></span>
+                                        Catania
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" value="trapani">
+                                        <span class="checkmark"></span>
+                                        Trapani
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" value="siracusa">
+                                        <span class="checkmark"></span>
+                                        Siracusa
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" value="altre">
+                                        <span class="checkmark"></span>
+                                        Altre province
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="filter-widget">
+                            <h3>Disponibilità</h3>
+                            <ul class="filter-list">
+                                <li>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" value="disponibile" checked>
+                                        <span class="checkmark"></span>
+                                        Disponibile
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" value="esaurito">
+                                        <span class="checkmark"></span>
+                                        Esaurito
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <button class="btn-reset-filters">Azzera Filtri</button>
+                    </aside>
+                    
+                    <!-- Griglia prodotti -->
+                    <div class="catalogo-content">
+                        <div class="catalogo-controls">
+                            <div class="catalogo-results">
+                                <p>Mostrando <span class="result-count">24</span> prodotti di <span class="total-count">138</span></p>
+                            </div>
+                            <div class="catalogo-sorting">
+                                <label for="sort-select">Ordina per:</label>
+                                <select id="sort-select">
+                                    <option value="popular">Popolarità</option>
+                                    <option value="price-low">Prezzo crescente</option>
+                                    <option value="price-high">Prezzo decrescente</option>
+                                    <option value="name-asc">Nome (A-Z)</option>
+                                    <option value="name-desc">Nome (Z-A)</option>
+                                </select>
+                            </div>
+                            <div class="catalogo-view">
+                                <button class="view-button grid-view active" aria-label="Vista griglia">
+                                    <i class="fas fa-th"></i>
+                                </button>
+                                <button class="view-button list-view" aria-label="Vista lista">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="products-grid">
+                            <!-- Prodotto 1 -->
+                            <div class="product-card">
+                                <div class="product-badge">Bestseller</div>
+                                <div class="product-image">
+                                    <a href="prodotto.html?id=1">
+                                        <img src="images/products/vino-nero-davola.jpg" alt="Nero d'Avola Riserva">
+                                    </a>
+                                    <div class="product-actions">
+                                        <button class="action-button wishlist" aria-label="Aggiungi ai preferiti">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="action-button add-to-cart" data-product-id="1" data-product-name="Nero d'Avola Riserva" aria-label="Aggiungi al carrello">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                        <button class="action-button quick-view" data-product-id="1" aria-label="Anteprima rapida">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-category">Vini Rossi</div>
+                                    <h3 class="product-title">
+                                        <a href="prodotto.html?id=1">Nero d'Avola Riserva</a>
+                                    </h3>
+                                    <div class="product-meta">
+                                        <div class="product-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span>(24)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span class="price">€12.90</span>
+                                            <span class="unit">/ bottiglia</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-description">
+                                        <p>Un vino rosso corposo con note di frutti di bosco e spezie. Perfetto per accompagnare carni rosse e formaggi stagionati.</p>
+                                    </div>
+                                    <a href="prodotto.html?id=1" class="btn btn-primary btn-sm">Dettagli</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Prodotto 2 -->
+                            <div class="product-card">
+                                <div class="product-badge">Nuovo</div>
+                                <div class="product-image">
+                                    <a href="prodotto.html?id=2">
+                                        <img src="images/products/olio-nocellara.jpg" alt="Olio EVO Nocellara">
+                                    </a>
+                                    <div class="product-actions">
+                                        <button class="action-button wishlist" aria-label="Aggiungi ai preferiti">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="action-button add-to-cart" data-product-id="2" data-product-name="Olio EVO Nocellara" aria-label="Aggiungi al carrello">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                        <button class="action-button quick-view" data-product-id="2" aria-label="Anteprima rapida">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-category">Oli</div>
+                                    <h3 class="product-title">
+                                        <a href="prodotto.html?id=2">Olio EVO Nocellara</a>
+                                    </h3>
+                                    <div class="product-meta">
+                                        <div class="product-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(18)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span class="price">€15.50</span>
+                                            <span class="unit">/ bottiglia</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-description">
+                                        <p>Olio extra vergine di oliva prodotto con olive Nocellara del Belice. Sapore fruttato e leggermente piccante.</p>
+                                    </div>
+                                    <a href="prodotto.html?id=2" class="btn btn-primary btn-sm">Dettagli</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Prodotto 3 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <a href="prodotto.html?id=3">
+                                        <img src="images/products/pasta-tumminia.jpg" alt="Pasta di Tumminia">
+                                    </a>
+                                    <div class="product-actions">
+                                        <button class="action-button wishlist" aria-label="Aggiungi ai preferiti">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="action-button add-to-cart" data-product-id="3" data-product-name="Pasta di Tumminia" aria-label="Aggiungi al carrello">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                        <button class="action-button quick-view" data-product-id="3" aria-label="Anteprima rapida">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-category">Pasta</div>
+                                    <h3 class="product-title">
+                                        <a href="prodotto.html?id=3">Pasta di Tumminia</a>
+                                    </h3>
+                                    <div class="product-meta">
+                                        <div class="product-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span>(11)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span class="price">€4.90</span>
+                                            <span class="unit">/ confezione</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-description">
+                                        <p>Pasta artigianale prodotta con grano antico siciliano Tumminia. Ricca di fibre e dal sapore unico.</p>
+                                    </div>
+                                    <a href="prodotto.html?id=3" class="btn btn-primary btn-sm">Dettagli</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Prodotto 4 -->
+                            <div class="product-card">
+                                <div class="product-badge">Offerta</div>
+                                <div class="product-image">
+                                    <a href="prodotto.html?id=4">
+                                        <img src="images/products/pesto-pistacchio.jpg" alt="Pesto al Pistacchio">
+                                    </a>
+                                    <div class="product-actions">
+                                        <button class="action-button wishlist" aria-label="Aggiungi ai preferiti">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="action-button add-to-cart" data-product-id="4" data-product-name="Pesto al Pistacchio" aria-label="Aggiungi al carrello">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                        <button class="action-button quick-view" data-product-id="4" aria-label="Anteprima rapida">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-category">Conserve</div>
+                                    <h3 class="product-title">
+                                        <a href="prodotto.html?id=4">Pesto al Pistacchio</a>
+                                    </h3>
+                                    <div class="product-meta">
+                                        <div class="product-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(28)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span class="price">€8.50</span>
+                                            <span class="old-price">€9.90</span>
+                                            <span class="unit">/ vasetto</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-description">
+                                        <p>Pesto cremoso preparato con pistacchi di Bronte DOP. Ideale per condire la pasta o come antipasto.</p>
+                                    </div>
+                                    <a href="prodotto.html?id=4" class="btn btn-primary btn-sm">Dettagli</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Prodotto 5 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <a href="prodotto.html?id=5">
+                                        <img src="images/products/grillo.jpg" alt="Grillo Sicilia DOC">
+                                    </a>
+                                    <div class="product-actions">
+                                        <button class="action-button wishlist" aria-label="Aggiungi ai preferiti">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="action-button add-to-cart" data-product-id="5" data-product-name="Grillo Sicilia DOC" aria-label="Aggiungi al carrello">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                        <button class="action-button quick-view" data-product-id="5" aria-label="Anteprima rapida">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-category">Vini Bianchi</div>
+                                    <h3 class="product-title">
+                                        <a href="prodotto.html?id=5">Grillo Sicilia DOC</a>
+                                    </h3>
+                                    <div class="product-meta">
+                                        <div class="product-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span>(15)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span class="price">€11.20</span>
+                                            <span class="unit">/ bottiglia</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-description">
+                                        <p>Vino bianco fresco e aromatico con note di agrumi e fiori bianchi. Perfetto con pesce e frutti di mare.</p>
+                                    </div>
+                                    <a href="prodotto.html?id=5" class="btn btn-primary btn-sm">Dettagli</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Prodotto 6 -->
+                            <div class="product-card">
+                                <div class="product-badge">Limitato</div>
+                                <div class="product-image">
+                                    <a href="prodotto.html?id=6">
+                                        <img src="images/products/conserva-pomodoro.jpg" alt="Conserva di Pomodoro Siccagno">
+                                    </a>
+                                    <div class="product-actions">
+                                        <button class="action-button wishlist" aria-label="Aggiungi ai preferiti">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <button class="action-button add-to-cart" data-product-id="6" data-product-name="Conserva di Pomodoro Siccagno" aria-label="Aggiungi al carrello">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                        <button class="action-button quick-view" data-product-id="6" aria-label="Anteprima rapida">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-category">Conserve</div>
+                                    <h3 class="product-title">
+                                        <a href="prodotto.html?id=6">Conserva di Pomodoro Siccagno</a>
+                                    </h3>
+                                    <div class="product-meta">
+                                        <div class="product-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span>(19)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span class="price">€5.80</span>
+                                            <span class="unit">/ vasetto</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-description">
+                                        <p>Passata di pomodoro Siccagno, coltivato in asciutto secondo tradizione. Dal sapore intenso e dolce.</p>
+                                    </div>
+                                    <a href="prodotto.html?id=6" class="btn btn-primary btn-sm">Dettagli</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Altri prodotti (mostrati come placeholder) -->
+                            <div class="product-card">
+                                <!-- Contenuto prodotto 7 (simile ai precedenti) -->
+                            </div>
+                            <div class="product-card">
+                                <!-- Contenuto prodotto 8 (simile ai precedenti) -->
+                            </div>
+                            <div class="product-card">
+                                <!-- Contenuto prodotto 9 (simile ai precedenti) -->
+                            </div>
+                            
+                        </div>
+                        
+                        <!-- Paginazione -->
+                        <div class="pagination">
+                            <a href="#" class="page-link prev" aria-label="Pagina precedente">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#" class="page-link active">1</a>
+                            <a href="#" class="page-link">2</a>
+                            <a href="#" class="page-link">3</a>
+                            <a href="#" class="page-link">4</a>
+                            <span class="page-dots">...</span>
+                            <a href="#" class="page-link">12</a>
+                            <a href="#" class="page-link next" aria-label="Pagina successiva">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>AlmaSicily Horeca</h3>
+                    <p>La tua fonte di eccellenze siciliane per il settore Ho.Re.Ca. Prodotti autentici, di alta qualità, consegnati direttamente alla tua attività.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Link Utili</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalogo.html">Catalogo</a></li>
+                        <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="termini-condizioni.html">Termini e Condizioni</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contatti</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Via Example, 123, 90100 Palermo, Italia</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+39123456789">+39 123 456 789</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@almasicily.com">info@almasicily.com</a></li>
+                        <li><i class="fas fa-clock"></i> Lun-Ven: 9:00-18:00</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Iscriviti alla nostra newsletter per restare aggiornato sulle novità e promozioni.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="La tua email" required>
+                        <button type="submit">Iscriviti</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AlmaSicily Horeca. Tutti i diritti riservati.</p>
+                <div class="payment-methods">
+                    <img src="images/payment-methods.png" alt="Metodi di pagamento">
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Modal per Quick View -->
+    <div class="quick-view-modal" id="quickViewModal">
+        <div class
