@@ -127,59 +127,6 @@
                         </div>
                         
                         <div class="filter-widget">
-                            <h3>Prezzo</h3>
-                            <div class="price-filter">
-                                <div class="price-inputs">
-                                    <input type="number" id="min-price" placeholder="Min €" min="0">
-                                    <span class="separator">-</span>
-                                    <input type="number" id="max-price" placeholder="Max €" min="0">
-                                </div>
-                                <button class="btn-filter">Applica</button>
-                            </div>
-                        </div>
-                        
-                        <div class="filter-widget">
-                            <h3>Provenienza</h3>
-                            <ul class="filter-list">
-                                <li>
-                                    <label class="checkbox-container">
-                                        <input type="checkbox" value="palermo">
-                                        <span class="checkmark"></span>
-                                        Palermo
-                                    </label>
-                                </li>
-                                <li>
-                                    <label class="checkbox-container">
-                                        <input type="checkbox" value="catania">
-                                        <span class="checkmark"></span>
-                                        Catania
-                                    </label>
-                                </li>
-                                <li>
-                                    <label class="checkbox-container">
-                                        <input type="checkbox" value="trapani">
-                                        <span class="checkmark"></span>
-                                        Trapani
-                                    </label>
-                                </li>
-                                <li>
-                                    <label class="checkbox-container">
-                                        <input type="checkbox" value="siracusa">
-                                        <span class="checkmark"></span>
-                                        Siracusa
-                                    </label>
-                                </li>
-                                <li>
-                                    <label class="checkbox-container">
-                                        <input type="checkbox" value="altre">
-                                        <span class="checkmark"></span>
-                                        Altre province
-                                    </label>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="filter-widget">
                             <h3>Disponibilità</h3>
                             <ul class="filter-list">
                                 <li>
@@ -497,18 +444,6 @@
                                     <a href="prodotto.html?id=6" class="btn btn-primary btn-sm">Dettagli</a>
                                 </div>
                             </div>
-                            
-                            <!-- Altri prodotti (mostrati come placeholder) -->
-                            <div class="product-card">
-                                <!-- Contenuto prodotto 7 (simile ai precedenti) -->
-                            </div>
-                            <div class="product-card">
-                                <!-- Contenuto prodotto 8 (simile ai precedenti) -->
-                            </div>
-                            <div class="product-card">
-                                <!-- Contenuto prodotto 9 (simile ai precedenti) -->
-                            </div>
-                            
                         </div>
                         
                         <!-- Paginazione -->
@@ -584,4 +519,36 @@
     
     <!-- Modal per Quick View -->
     <div class="quick-view-modal" id="quickViewModal">
-        <div class
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Chiudi anteprima">&times;</button>
+            <div class="product-quick-view">
+                <div class="product-image">
+                    <img src="" alt="Anteprima prodotto" id="quickViewImage">
+                </div>
+                <div class="product-details">
+                    <h2 id="quickViewTitle"></h2>
+                    <div class="product-category" id="quickViewCategory"></div>
+                    <div class="product-rating" id="quickViewRating"></div>
+                    <div class="product-price" id="quickViewPrice"></div>
+                    <div class="product-description" id="quickViewDescription"></div>
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="quantity-button minus">-</button>
+                            <input type="number" value="1" min="1" id="quickViewQuantity">
+                            <button class="quantity-button plus">+</button>
+                        </div>
+                        <button class="btn btn-primary add-to-cart-modal">Aggiungi al Carrello</button>
+                    </div>
+                    <div class="product-meta-info">
+                        <p><strong>SKU:</strong> <span id="quickViewSku"></span></p>
+                        <p><strong>Disponibilità:</strong> <span id="quickViewAvailability"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/catalogo.js"></script>
+</body>
+</html>
