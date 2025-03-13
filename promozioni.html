@@ -1,1 +1,291 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promozioni - AlmaSicily Horeca B2B</title>
+    <meta name="description" content="Scopri le promozioni e gli sconti speciali di AlmaSicily Horeca per il settore Ho.Re.Ca.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/promozioni.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/almasicily-logo.png" alt="AlmaSicily Logo">
+                    </a>
+                </div>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <form action="search.html" method="get">
+                            <input type="text" name="query" placeholder="Cerca prodotti...">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="user-actions">
+                        <a href="login.html" class="btn btn-outline"><i class="fas fa-user"></i> Accedi</a>
+                        <a href="cart.html" class="btn btn-cart"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                    </div>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <nav class="main-navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="has-submenu">
+                        <a href="catalogo.html">Catalogo <i class="fas fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="categoria.html?cat=vini">Vini</a></li>
+                            <li><a href="categoria.html?cat=oli">Oli</a></li>
+                            <li><a href="categoria.html?cat=conserve">Conserve</a></li>
+                            <li><a href="categoria.html?cat=pasta">Pasta</a></li>
+                            <li><a href="categoria.html?cat=dolci">Dolci</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="promozioni.html">Promozioni</a></li>
+                    <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Breadcrumb -->
+        <div class="breadcrumb-container">
+            <div class="container">
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Promozioni</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Hero Section -->
+        <section class="promo-hero-section">
+            <div class="container">
+                <div class="promo-hero-content">
+                    <h1>Offerte Speciali e Promozioni</h1>
+                    <p>Scopri le promozioni esclusive per i clienti AlmaSicily Horeca</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Main Promotion Section -->
+        <section class="main-promo-section">
+            <div class="container">
+                <div class="main-promo-card">
+                    <div class="promo-card-content">
+                        <div class="promo-badge">Esclusiva B2B</div>
+                        <h2>Sconto Personalizzato per Ordini Superiori a €2.000</h2>
+                        <p>Per tutti i nostri clienti Ho.Re.Ca., offriamo uno sconto personalizzato per ordini superiori a €2.000. Contattaci per ricevere la tua offerta su misura.</p>
+                        <div class="promo-details">
+                            <div class="promo-detail">
+                                <i class="fas fa-percentage"></i>
+                                <span>Sconto Personalizzato</span>
+                            </div>
+                            <div class="promo-detail">
+                                <i class="fas fa-truck"></i>
+                                <span>Spedizione Gratuita</span>
+                            </div>
+                            <div class="promo-detail">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Pagamento a 60 giorni</span>
+                            </div>
+                        </div>
+                        <a href="contatti.html" class="btn btn-primary">Contattaci per un'Offerta</a>
+                    </div>
+                    <div class="promo-card-image">
+                        <img src="images/promozioni/main-promo.jpg" alt="Promozione principale">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Other Promotions -->
+        <section class="other-promos-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Altre Offerte in Corso</h2>
+                    <p>Approfitta delle nostre promozioni a tempo limitato</p>
+                </div>
+                <div class="promos-grid">
+                    <!-- Promo 1 -->
+                    <div class="promo-card">
+                        <div class="promo-image">
+                            <img src="images/promozioni/promo-vini.jpg" alt="Promozione Vini">
+                            <div class="promo-badge">-15%</div>
+                        </div>
+                        <div class="promo-info">
+                            <h3>Promozione Vini Siciliani</h3>
+                            <p>Sconto del 15% su tutti i vini siciliani per ordini di almeno 36 bottiglie (anche miste).</p>
+                            <div class="promo-period">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>Valida fino al 30/04/2025</span>
+                            </div>
+                            <a href="categoria.html?cat=vini" class="btn btn-primary btn-sm">Scopri</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Promo 2 -->
+                    <div class="promo-card">
+                        <div class="promo-image">
+                            <img src="images/promozioni/promo-conserve.jpg" alt="Promozione Conserve">
+                            <div class="promo-badge">3x2</div>
+                        </div>
+                        <div class="promo-info">
+                            <h3>Offerta Conserve 3x2</h3>
+                            <p>Acquista 3 confezioni di conserve della stessa linea e la meno costosa è in omaggio.</p>
+                            <div class="promo-period">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>Valida fino al 15/05/2025</span>
+                            </div>
+                            <a href="categoria.html?cat=conserve" class="btn btn-primary btn-sm">Scopri</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Promo 3 -->
+                    <div class="promo-card">
+                        <div class="promo-image">
+                            <img src="images/promozioni/promo-assortimento.jpg" alt="Promozione Nuovi Clienti">
+                            <div class="promo-badge">-10%</div>
+                        </div>
+                        <div class="promo-info">
+                            <h3>Benvenuto Nuovi Clienti</h3>
+                            <p>Sconto del 10% sul primo ordine per tutti i nuovi clienti che si registrano sul nostro portale.</p>
+                            <div class="promo-period">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>Sempre valida</span>
+                            </div>
+                            <a href="registrazione.html" class="btn btn-primary btn-sm">Registrati</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Volume Discounts -->
+        <section class="volume-discounts-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Sconti per Volume</h2>
+                    <p>Maggiore è il tuo ordine, maggiore è il risparmio</p>
+                </div>
+                <div class="discounts-table-container">
+                    <table class="discounts-table">
+                        <thead>
+                            <tr>
+                                <th>Importo Ordine</th>
+                                <th>Sconto</th>
+                                <th>Spedizione</th>
+                                <th>Pagamento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>€500 - €999</td>
+                                <td>3%</td>
+                                <td>Gratuita</td>
+                                <td>30 giorni</td>
+                            </tr>
+                            <tr>
+                                <td>€1.000 - €1.999</td>
+                                <td>5%</td>
+                                <td>Gratuita</td>
+                                <td>30 giorni</td>
+                            </tr>
+                            <tr>
+                                <td>€2.000 - €4.999</td>
+                                <td>7%</td>
+                                <td>Gratuita</td>
+                                <td>60 giorni</td>
+                            </tr>
+                            <tr>
+                                <td>€5.000+</td>
+                                <td>10%</td>
+                                <td>Gratuita</td>
+                                <td>60 giorni</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="discounts-note">
+                    <p><i class="fas fa-info-circle"></i> Gli sconti non sono cumulabili con altre promozioni in corso. Per ordini di importo superiore a €10.000, contattaci per condizioni personalizzate.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call To Action -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Scopri tutti i vantaggi di AlmaSicily Horeca</h2>
+                    <p>Registrati oggi per accedere a promozioni esclusive e alla nostra gamma completa di prodotti per il settore Ho.Re.Ca.</p>
+                    <div class="cta-buttons">
+                        <a href="registrazione.html" class="btn btn-primary">Registrati Ora</a>
+                        <a href="contatti.html" class="btn btn-secondary">Contattaci</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>AlmaSicily Horeca</h3>
+                    <p>La tua fonte di eccellenze siciliane per il settore Ho.Re.Ca. Prodotti autentici, di alta qualità, consegnati direttamente alla tua attività.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Link Utili</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalogo.html">Catalogo</a></li>
+                        <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="termini-condizioni.html">Termini e Condizioni</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contatti</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Via Example, 123, 90100 Palermo, Italia</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+39123456789">+39 123 456 789</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@almasicily.com">info@almasicily.com</a></li>
+                        <li><i class="fas fa-clock"></i> Lun-Ven: 9:00-18:00</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Iscriviti alla nostra newsletter per restare aggiornato sulle novità e promozioni.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="La tua email" required>
+                        <button type="submit">Iscriviti</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AlmaSicily Horeca. Tutti i diritti riservati.</p>
+                <div class="payment-methods">
+                    <img src="images/payment-methods.png" alt="Metodi di pagamento">
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <script src="js/main.js"></script>
+</body>
+</html>
