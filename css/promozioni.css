@@ -1,1 +1,342 @@
+/* Stili per la pagina Promozioni */
 
+/* Hero Section */
+.promo-hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/promozioni/promo-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+    margin-bottom: 60px;
+}
+
+.promo-hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.promo-hero-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Main Promotion Section */
+.main-promo-section {
+    padding-bottom: 60px;
+}
+
+.main-promo-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.promo-card-content {
+    flex: 1;
+    padding: 50px;
+    position: relative;
+}
+
+.promo-badge {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    background-color: #FF5722;
+    color: white;
+    padding: 8px 20px;
+    font-weight: 600;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 0 3px 10px rgba(255, 87, 34, 0.3);
+}
+
+.promo-card-content h2 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.promo-card-content p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.promo-details {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.promo-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.promo-detail i {
+    color: #4CAF50;
+    font-size: 20px;
+}
+
+.promo-detail span {
+    font-weight: 500;
+    color: #555;
+}
+
+.promo-card-image {
+    flex: 1;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promo-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Other Promotions */
+.other-promos-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.promos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.promo-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.promo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.promo-image {
+    position: relative;
+    height: 200px;
+}
+
+.promo-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.promo-image .promo-badge {
+    top: 15px;
+    left: 15px;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 0.9rem;
+}
+
+.promo-info {
+    padding: 25px;
+}
+
+.promo-info h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.promo-info p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.promo-period {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.promo-period i {
+    color: #4CAF50;
+}
+
+/* Volume Discounts Section */
+.volume-discounts-section {
+    padding: 80px 0;
+}
+
+.discounts-table-container {
+    max-width: 900px;
+    margin: 40px auto;
+    overflow-x: auto;
+}
+
+.discounts-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.discounts-table th, .discounts-table td {
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.discounts-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: 600;
+}
+
+.discounts-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.discounts-table tr:last-child td {
+    border-bottom: none;
+}
+
+.discounts-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+}
+
+.discounts-note {
+    max-width: 900px;
+    margin: 20px auto;
+    color: #666;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.discounts-note i {
+    color: #4CAF50;
+    margin-top: 3px;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 80px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/cta-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-section .btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.cta-section .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .main-promo-card {
+        flex-direction: column;
+    }
+    
+    .promo-card-content {
+        padding: 30px;
+    }
+    
+    .promo-card-image {
+        height: 300px;
+    }
+    
+    .promos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .promo-badge {
+        font-size: 0.85rem;
+        padding: 6px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .promo-hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .promo-card-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .promo-details {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .promos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .discounts-table th, .discounts-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
