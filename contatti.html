@@ -14,3 +14,295 @@
     <header class="main-header">
         <div class="container">
             <div class="header-top">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/almasicily-logo.png" alt="AlmaSicily Logo">
+                    </a>
+                </div>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <form action="search.html" method="get">
+                            <input type="text" name="query" placeholder="Cerca prodotti...">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="user-actions">
+                        <a href="login.html" class="btn btn-outline"><i class="fas fa-user"></i> Accedi</a>
+                        <a href="cart.html" class="btn btn-cart"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                    </div>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <nav class="main-navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="has-submenu">
+                        <a href="catalogo.html">Catalogo <i class="fas fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="categoria.html?cat=vini">Vini</a></li>
+                            <li><a href="categoria.html?cat=oli">Oli</a></li>
+                            <li><a href="categoria.html?cat=conserve">Conserve</a></li>
+                            <li><a href="categoria.html?cat=pasta">Pasta</a></li>
+                            <li><a href="categoria.html?cat=dolci">Dolci</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="promozioni.html">Promozioni</a></li>
+                    <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Breadcrumb -->
+        <div class="breadcrumb-container">
+            <div class="container">
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Contatti</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Hero Section -->
+        <section class="contact-hero-section">
+            <div class="container">
+                <div class="contact-hero-content">
+                    <h1>Contattaci</h1>
+                    <p>Siamo qui per rispondere a tutte le tue domande e fornirti il supporto di cui hai bisogno</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Info Section -->
+        <section class="contact-info-section">
+            <div class="container">
+                <div class="contact-info-grid">
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Indirizzo</h3>
+                        <p>Via Example, 123<br>90100 Palermo<br>Italia</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Telefono</h3>
+                        <p>+39 123 456 789<br>+39 098 765 432</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@almasicily.com">info@almasicily.com</a><br><a href="mailto:ordini@almasicily.com">ordini@almasicily.com</a></p>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Orari</h3>
+                        <p>Lun-Ven: 9:00-18:00<br>Sab: 9:00-13:00<br>Dom: Chiuso</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Form Section -->
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form-container">
+                        <div class="section-header">
+                            <h2>Inviaci un Messaggio</h2>
+                            <p>Compila il form sottostante e ti risponderemo al più presto</p>
+                        </div>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Nome e Cognome *</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="company">Azienda *</label>
+                                    <input type="text" id="company" name="company" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Telefono</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Oggetto *</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Messaggio *</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="privacy" name="privacy" required>
+                                    <span class="checkmark"></span>
+                                    Ho letto e accetto la <a href="privacy-policy.html">Privacy Policy</a> *
+                                </label>
+                            </div>
+                            <div class="form-submit">
+                                <button type="submit" class="btn btn-primary">Invia Messaggio</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="contact-map-container">
+                        <div class="section-header">
+                            <h2>Dove Siamo</h2>
+                            <p>Vieni a trovarci nella nostra sede</p>
+                        </div>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50800.82552953663!2d13.3144693582056!3d38.13384719127499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1319e8c9814ed099%3A0xa0b042c233bd880!2sPalermo%2C%20Province%20of%20Palermo%2C%20Italy!5e0!3m2!1sen!2sus!4v1615293900845!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Domande Frequenti</h2>
+                    <p>Risposte alle domande più comuni</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Come posso diventare cliente B2B di AlmaSicily Horeca?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Per diventare cliente B2B è sufficiente registrarsi sul nostro sito compilando il modulo di registrazione. Dopo la verifica dei dati, riceverai le credenziali di accesso e potrai iniziare a ordinare direttamente online. In alternativa, puoi contattarci telefonicamente o via email per ricevere assistenza personalizzata.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Quali sono i tempi di consegna?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>I tempi di consegna variano in base alla destinazione. Per le consegne in Sicilia, garantiamo la consegna entro 24-48 ore lavorative. Per il resto d'Italia, le consegne avvengono in 2-4 giorni lavorativi. Per le destinazioni europee, prevedere 5-7 giorni lavorativi. Per ordini speciali o grandi quantità, i tempi possono variare.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Qual è l'ordine minimo?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>L'ordine minimo per i clienti B2B è di €300. Per ordini inferiori a questa soglia, è previsto un contributo di €15 per le spese di trasporto. Per ordini superiori a €500, la spedizione è gratuita in tutta Italia.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Quali metodi di pagamento accettate?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Accettiamo diverse modalità di pagamento: bonifico bancario anticipato, carta di credito, PayPal, e per i clienti consolidati è disponibile anche il pagamento a 30/60 giorni dalla data di fattura. Per maggiori dettagli, contatta il nostro ufficio amministrativo.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Offrite campioni prima dell'acquisto?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sì, per i nuovi clienti B2B offriamo la possibilità di ricevere campioni di alcuni prodotti prima di effettuare ordini più consistenti. I campioni vengono inviati a un prezzo ridotto o gratuitamente per ordini di valore elevato. Contattaci per maggiori informazioni sui prodotti disponibili per il campionamento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2>Resta Aggiornato</h2>
+                        <p>Iscriviti alla nostra newsletter per ricevere aggiornamenti su nuovi prodotti, promozioni e novità dal mondo AlmaSicily Horeca.</p>
+                    </div>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Inserisci la tua email" required>
+                            <button type="submit" class="btn btn-primary">Iscriviti</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>AlmaSicily Horeca</h3>
+                    <p>La tua fonte di eccellenze siciliane per il settore Ho.Re.Ca. Prodotti autentici, di alta qualità, consegnati direttamente alla tua attività.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Link Utili</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalogo.html">Catalogo</a></li>
+                        <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="termini-condizioni.html">Termini e Condizioni</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contatti</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Via Example, 123, 90100 Palermo, Italia</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+39123456789">+39 123 456 789</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@almasicily.com">info@almasicily.com</a></li>
+                        <li><i class="fas fa-clock"></i> Lun-Ven: 9:00-18:00</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Iscriviti alla nostra newsletter per restare aggiornato sulle novità e promozioni.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="La tua email" required>
+                        <button type="submit">Iscriviti</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AlmaSicily Horeca. Tutti i diritti riservati.</p>
+                <div class="payment-methods">
+                    <img src="images/payment-methods.png" alt="Metodi di pagamento">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contatti.js"></script>
+</body>
+</html>
