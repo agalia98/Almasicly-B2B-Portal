@@ -1,382 +1,792 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlmaSicily Horeca - Eccellenze Siciliane per il mondo Ho.Re.Ca.</title>
-    <meta name="description" content="Scopri AlmaSicily Horeca, il partner ideale per ristoranti, hotel e catering. Prodotti siciliani autentici di alta qualità per il settore Ho.Re.Ca.">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="images/favicon.ico">
+    <title>Almasicily - Premium Sicilian Foods for HORECA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c29 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo::before {
+            content: "🍃";
+            font-size: 1.5rem;
+        }
+
+        .language-selector {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .language-selector select {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            cursor: pointer;
+        }
+
+        .language-selector select option {
+            background: #2d5016;
+            color: white;
+        }
+
+        nav {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem 0;
+            margin-top: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(45,80,22,0.8), rgba(74,124,41,0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f4f4f4" width="1200" height="600"/><path fill="%23e8e8e8" d="M0 300L25 283.3C50 266.7 100 233.3 150 233.3C200 233.3 250 266.7 300 283.3C350 300 400 300 450 283.3C500 266.7 550 233.3 600 233.3C650 233.3 700 266.7 750 283.3C800 300 850 300 900 283.3C950 266.7 1000 233.3 1050 233.3C1100 233.3 1150 266.7 1175 283.3L1200 300V600H0Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #ff6b35;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text {
+            padding: 0 20px;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            color: #2d5016;
+            margin-bottom: 1.5rem;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c29 100%);
+            height: 400px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2d5016;
+            margin-bottom: 3rem;
+        }
+
+        .product-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-header {
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c29 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .category-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .category-content {
+            padding: 20px;
+        }
+
+        .product-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .product-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            color: #555;
+        }
+
+        .product-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Download Section */
+        .download {
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c29 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .download h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .download p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .download-button {
+            background: #ff6b35;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .download-button:hover {
+            background: #e55a2e;
+            transform: translateY(-2px);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .contact-info h3 {
+            color: #2d5016;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item i {
+            color: #4a7c29;
+            font-size: 1.2rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d5016;
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 15px;
+            color: #a8d462;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: #a8d462;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #4a7c29;
+            padding-top: 20px;
+            color: #ccc;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .product-categories {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Language Content */
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Icons */
+        .icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
 </head>
 <body>
-    <header class="main-header">
+    <header>
         <div class="container">
-            <div class="header-top">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="images/almasicily-logo.png" alt="AlmaSicily Logo">
-                    </a>
-                </div>
-                <div class="header-actions">
-                    <div class="search-bar">
-                        <form action="search.html" method="get">
-                            <input type="text" name="query" placeholder="Cerca prodotti...">
-                            <button type="submit"><i class="fas fa-search"></i></button>
-                        </form>
-                    </div>
-                    <div class="user-actions">
-                        <a href="login.html" class="btn btn-outline"><i class="fas fa-user"></i> Accedi</a>
-                        <a href="cart.html" class="btn btn-cart"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
-                    </div>
-                </div>
-                <div class="mobile-menu-toggle">
-                    <i class="fas fa-bars"></i>
+            <div class="header-content">
+                <a href="#" class="logo">almasicily</a>
+                <div class="language-selector">
+                    <select id="languageSelect" onchange="changeLanguage()">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="at">Österreich</option>
+                        <option value="sv">Svenska</option>
+                        <option value="it">Italiano</option>
+                    </select>
                 </div>
             </div>
-            <nav class="main-navigation">
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="has-submenu">
-                        <a href="catalogo.html">Catalogo <i class="fas fa-chevron-down"></i></a>
-                        <ul class="submenu">
-                            <li><a href="categoria.html?cat=vini">Vini</a></li>
-                            <li><a href="categoria.html?cat=oli">Oli</a></li>
-                            <li><a href="categoria.html?cat=conserve">Conserve</a></li>
-                            <li><a href="categoria.html?cat=pasta">Pasta</a></li>
-                            <li><a href="categoria.html?cat=dolci">Dolci</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="promozioni.html">Promozioni</a></li>
-                    <li><a href="chi-siamo.html">Chi Siamo</a></li>
-                    <li><a href="contatti.html">Contatti</a></li>
+            <nav>
+                <ul>
+                    <li><a href="#home" data-lang="nav-home">Home</a></li>
+                    <li><a href="#about" data-lang="nav-about">About</a></li>
+                    <li><a href="#products" data-lang="nav-products">Products</a></li>
+                    <li><a href="#catalog" data-lang="nav-catalog">Catalog</a></li>
+                    <li><a href="#contact" data-lang="nav-contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    
+
     <main>
         <!-- Hero Section -->
-        <section class="hero-section">
+        <section id="home" class="hero">
             <div class="container">
-                <div class="hero-content">
-                    <h1>Eccellenze Siciliane per il tuo Business</h1>
-                    <p>Selezioniamo i migliori prodotti della tradizione siciliana per il settore Ho.Re.Ca. Qualità garantita, consegne rapide e supporto dedicato.</p>
-                    <div class="hero-buttons">
-                        <a href="catalogo.html" class="btn btn-primary">Esplora Catalogo</a>
-                        <a href="chi-siamo.html" class="btn btn-secondary">Scopri AlmaSicily</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="images/hero-image.jpg" alt="Prodotti siciliani di alta qualità">
-                </div>
-            </div>
-        </section>
-
-        <!-- Categorie in Evidenza -->
-        <section class="featured-categories">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Categorie in Evidenza</h2>
-                    <p>Esplora la nostra selezione di prodotti siciliani autentici</p>
-                </div>
-                <div class="categories-grid">
-                    <div class="category-card">
-                        <img src="images/categories/vini.jpg" alt="Vini siciliani">
-                        <h3>Vini</h3>
-                        <p>Rossi, bianchi e rosati dalle migliori cantine siciliane</p>
-                        <a href="categoria.html?cat=vini" class="btn-text">Scopri <i class="fas fa-chevron-right"></i></a>
-                    </div>
-                    <div class="category-card">
-                        <img src="images/categories/oli.jpg" alt="Oli siciliani">
-                        <h3>Oli d'Oliva</h3>
-                        <p>Extra vergine di oliva dai migliori uliveti dell'isola</p>
-                        <a href="categoria.html?cat=oli" class="btn-text">Scopri <i class="fas fa-chevron-right"></i></a>
-                    </div>
-                    <div class="category-card">
-                        <img src="images/categories/conserve.jpg" alt="Conserve siciliane">
-                        <h3>Conserve</h3>
-                        <p>Sapori autentici conservati secondo le tradizioni</p>
-                        <a href="categoria.html?cat=conserve" class="btn-text">Scopri <i class="fas fa-chevron-right"></i></a>
-                    </div>
-                    <div class="category-card">
-                        <img src="images/categories/pasta.jpg" alt="Pasta siciliana">
-                        <h3>Pasta</h3>
-                        <p>Pasta artigianale prodotta con grani antichi siciliani</p>
-                        <a href="categoria.html?cat=pasta" class="btn-text">Scopri <i class="fas fa-chevron-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Perché Sceglierci -->
-        <section class="why-choose-us">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Perché Scegliere AlmaSicily Horeca</h2>
-                    <p>I vantaggi di una partnership con noi</p>
-                </div>
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <h3>Qualità Garantita</h3>
-                        <p>Selezioniamo solo prodotti di eccellenza, controllati e certificati.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3>Consegne Veloci</h3>
-                        <p>Servizio di consegna rapido e affidabile in tutta Italia.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-tags"></i>
-                        </div>
-                        <h3>Prezzi Competitivi</h3>
-                        <p>Offriamo il miglior rapporto qualità-prezzo per il settore Ho.Re.Ca.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <h3>Supporto Dedicato</h3>
-                        <p>Un team di esperti a tua disposizione per qualsiasi necessità.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Prodotti in Evidenza -->
-        <section class="featured-products">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Prodotti in Evidenza</h2>
-                    <p>Scopri i nostri prodotti più richiesti</p>
-                </div>
-                <div class="products-slider">
-                    <div class="product-card">
-                        <div class="product-badge">Bestseller</div>
-                        <img src="images/products/vino-nero-davola.jpg" alt="Nero d'Avola">
-                        <div class="product-info">
-                            <h3>Nero d'Avola Riserva</h3>
-                            <p class="product-category">Vini Rossi</p>
-                            <div class="product-price">
-                                <span class="price">€12.90</span>
-                                <span class="unit">/ bottiglia</span>
-                            </div>
-                            <a href="prodotto.html?id=1" class="btn btn-primary btn-sm">Dettagli</a>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-badge">Nuovo</div>
-                        <img src="images/products/olio-nocellara.jpg" alt="Olio Nocellara">
-                        <div class="product-info">
-                            <h3>Olio EVO Nocellara</h3>
-                            <p class="product-category">Oli</p>
-                            <div class="product-price">
-                                <span class="price">€15.50</span>
-                                <span class="unit">/ bottiglia</span>
-                            </div>
-                            <a href="prodotto.html?id=2" class="btn btn-primary btn-sm">Dettagli</a>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <img src="images/products/pasta-tumminia.jpg" alt="Pasta Tumminia">
-                        <div class="product-info">
-                            <h3>Pasta di Tumminia</h3>
-                            <p class="product-category">Pasta</p>
-                            <div class="product-price">
-                                <span class="price">€4.90</span>
-                                <span class="unit">/ confezione</span>
-                            </div>
-                            <a href="prodotto.html?id=3" class="btn btn-primary btn-sm">Dettagli</a>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-badge">Offerta</div>
-                        <img src="images/products/pesto-pistacchio.jpg" alt="Pesto al Pistacchio">
-                        <div class="product-info">
-                            <h3>Pesto al Pistacchio</h3>
-                            <p class="product-category">Conserve</p>
-                            <div class="product-price">
-                                <span class="price">€8.50</span>
-                                <span class="old-price">€9.90</span>
-                                <span class="unit">/ vasetto</span>
-                            </div>
-                            <a href="prodotto.html?id=4" class="btn btn-primary btn-sm">Dettagli</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="view-all-link">
-                    <a href="catalogo.html" class="btn btn-outline">Vedi Tutti i Prodotti</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonianze -->
-        <section class="testimonials">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Cosa Dicono i Nostri Clienti</h2>
-                    <p>Testimonianze dal settore Ho.Re.Ca.</p>
-                </div>
-                <div class="testimonials-slider">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"Da quando lavoriamo con AlmaSicily, i nostri clienti apprezzano ancora di più i nostri piatti. La qualità dei loro prodotti è impareggiabile."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="images/testimonials/chef1.jpg" alt="Chef Marco Rossi">
-                            <div>
-                                <h4>Marco Rossi</h4>
-                                <p>Chef, Ristorante La Terrazza</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"Consegne sempre puntuali e prodotti sempre freschi. Un partner affidabile per il nostro hotel. Il servizio clienti è sempre disponibile per qualsiasi esigenza."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="images/testimonials/hotel-manager.jpg" alt="Giulia Bianchi">
-                            <div>
-                                <h4>Giulia Bianchi</h4>
-                                <p>F&B Manager, Grand Hotel Palermo</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"La varietà dei prodotti e la loro autenticità ci permettono di offrire un'esperienza culinaria unica ai nostri clienti. AlmaSicily è un vero tesoro."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="images/testimonials/chef2.jpg" alt="Antonio Ferrara">
-                            <div>
-                                <h4>Antonio Ferrara</h4>
-                                <p>Proprietario, Trattoria Da Antonio</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Call To Action -->
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Diventa nostro Partner</h2>
-                    <p>Entra a far parte della rete AlmaSicily Horeca e scopri tutti i vantaggi riservati ai professionisti del settore.</p>
+                <div class="hero-content fade-in">
+                    <h1 data-lang="hero-title">Premium Sicilian Foods for HORECA</h1>
+                    <p data-lang="hero-subtitle">Authentic flavors from Sicily delivered to restaurants, hotels, and cafes across Europe</p>
                     <div class="cta-buttons">
-                        <a href="registrazione.html" class="btn btn-primary">Registrati Ora</a>
-                        <a href="contatti.html" class="btn btn-secondary">Contattaci</a>
+                        <a href="#catalog" class="btn btn-primary" data-lang="hero-catalog">Download Catalog</a>
+                        <a href="#contact" class="btn btn-secondary" data-lang="hero-contact">Get Quote</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Blog e Novità -->
-        <section class="blog-section">
+        <!-- About Section -->
+        <section id="about" class="about">
             <div class="container">
-                <div class="section-header">
-                    <h2>Blog e Novità</h2>
-                    <p>Restati aggiornato sulle ultime novità</p>
-                </div>
-                <div class="blog-grid">
-                    <div class="blog-card">
-                        <div class="blog-image">
-                            <img src="images/blog/vendemmia.jpg" alt="Vendemmia in Sicilia">
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-date">12 Marzo 2025</div>
-                            <h3>La vendemmia 2024: un'annata eccezionale</h3>
-                            <p>Scopri perché i vini siciliani dell'annata 2024 saranno tra i migliori degli ultimi anni.</p>
-                            <a href="blog-post.html?id=1" class="btn-text">Leggi di più <i class="fas fa-chevron-right"></i></a>
-                        </div>
+                <div class="about-content">
+                    <div class="about-text fade-in">
+                        <h2 data-lang="about-title">Our Story</h2>
+                        <p data-lang="about-text1">Almasicily was born from a father's love - named after Alma, our founder's first daughter. When preparing for her weaning in 2015, we realized how difficult it was to find truly genuine, wholesome food.</p>
+                        <p data-lang="about-text2">This sparked the creation of a clean, transparent, and reliable company that supports local small producers, organic and sustainable agriculture principles, and slow production methods that preserve both nutritional properties and authentic taste.</p>
+                        <p data-lang="about-text3">We bring authentic Sicilian products to your table - products that are exactly what they claim to be and truly come from where they say they come from. That's why they're naturally better.</p>
                     </div>
-                    <div class="blog-card">
-                        <div class="blog-image">
-                            <img src="images/blog/nuovi-prodotti.jpg" alt="Nuovi prodotti">
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-date">5 Marzo 2025</div>
-                            <h3>Nuovi prodotti in catalogo: le specialità di primavera</h3>
-                            <p>Abbiamo aggiunto nuove specialità siciliane perfette per i menù primaverili.</p>
-                            <a href="blog-post.html?id=2" class="btn-text">Leggi di più <i class="fas fa-chevron-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="blog-card">
-                        <div class="blog-image">
-                            <img src="images/blog/chef-evento.jpg" alt="Evento con chef">
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-date">28 Febbraio 2025</div>
-                            <h3>Workshop con chef siciliani: un successo!</h3>
-                            <p>Il resoconto del nostro ultimo evento dedicato ai professionisti del settore.</p>
-                            <a href="blog-post.html?id=3" class="btn-text">Leggi di più <i class="fas fa-chevron-right"></i></a>
+                    <div class="about-image">
+                        <div>
+                            <h3 data-lang="about-image-title">From Sicily to Your Kitchen</h3>
+                            <p data-lang="about-image-text">Authentic ingredients, traditional methods, genuine flavors</p>
                         </div>
                     </div>
                 </div>
-                <div class="view-all-link">
-                    <a href="blog.html" class="btn btn-outline">Vedi Tutti gli Articoli</a>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products">
+            <div class="container">
+                <h2 class="section-title" data-lang="products-title">Our Product Categories</h2>
+                <div class="product-categories">
+                    <div class="category-card fade-in">
+                        <div class="category-header">
+                            <h3 data-lang="category-preserves">Preserves & Condiments</h3>
+                            <p data-lang="category-preserves-desc">Traditional Sicilian preparations</p>
+                        </div>
+                        <div class="category-content">
+                            <ul class="product-list">
+                                <li data-lang="product-caponata">Caponata Siciliana</li>
+                                <li data-lang="product-artichoke-caponata">Artichoke Caponata</li>
+                                <li data-lang="product-fennel-sardine">Wild Fennel & Sardine Condiment</li>
+                                <li data-lang="product-tomato-sauces">Tomato Sauces & Passata</li>
+                                <li data-lang="product-pates">Artisanal Pâtés</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="category-card fade-in">
+                        <div class="category-header">
+                            <h3 data-lang="category-vegetables">Preserved Vegetables</h3>
+                            <p data-lang="category-vegetables-desc">Premium quality vegetables in oil</p>
+                        </div>
+                        <div class="category-content">
+                            <ul class="product-list">
+                                <li data-lang="product-artichokes">Artichokes in Oil</li>
+                                <li data-lang="product-mushrooms">Mushrooms in Oil</li>
+                                <li data-lang="product-olives">Marinated Olives</li>
+                                <li data-lang="product-peppers">Stuffed Peppers</li>
+                                <li data-lang="product-grilled-vegetables">Grilled Vegetables</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="category-card fade-in">
+                        <div class="category-header">
+                            <h3 data-lang="category-dairy">Dairy & Meats</h3>
+                            <p data-lang="category-dairy-desc">Artisanal cheeses and cured meats</p>
+                        </div>
+                        <div class="category-content">
+                            <ul class="product-list">
+                                <li data-lang="product-sheep-cheese">Sheep Cheese Varieties</li>
+                                <li data-lang="product-goat-cheese">Goat Cheese Selection</li>
+                                <li data-lang="product-cured-meats">Cured Meats & Salami</li>
+                                <li data-lang="product-oregano">Wild Oregano</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section id="catalog" class="download">
+            <div class="container">
+                <h2 data-lang="download-title">Complete Product Catalog</h2>
+                <p data-lang="download-description">Download our comprehensive catalog with detailed product specifications, packaging options, and pricing information for HORECA professionals.</p>
+                <button class="download-button" onclick="downloadCatalog()" data-lang="download-button">Download PDF Catalog</button>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title" data-lang="contact-title">Get in Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info fade-in">
+                        <h3 data-lang="contact-info-title">Contact Information</h3>
+                        <div class="contact-item">
+                            <span class="icon">📍</span>
+                            <div>
+                                <strong data-lang="contact-address-label">Address:</strong><br>
+                                <span data-lang="contact-address">Via Armando Diaz, 118<br>92024 Canicattì (AG), Italy</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">📞</span>
+                            <div>
+                                <strong data-lang="contact-phone-label">Phone:</strong><br>
+                                <span>+39 339 2458190</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">✉️</span>
+                            <div>
+                                <strong data-lang="contact-email-label">Email:</strong><br>
+                                <span>info@almasicily.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">🌐</span>
+                            <div>
+                                <strong data-lang="contact-website-label">Website:</strong><br>
+                                <span>www.almasicily.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form fade-in" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="company" data-lang="form-company">Company Name *</label>
+                            <input type="text" id="company" name="company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name" data-lang="form-name">Contact Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-lang="form-email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" data-lang="form-phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="country" data-lang="form-country">Country *</label>
+                            <select id="country" name="country" required>
+                                <option value="">Select Country</option>
+                                <option value="IT">Italy</option>
+                                <option value="ES">Spain</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                                <option value="AT">Austria</option>
+                                <option value="SE">Sweden</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="NL">Netherlands</option>
+                                <option value="BE">Belgium</option>
+                                <option value="CH">Switzerland</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="business-type" data-lang="form-business-type">Business Type *</label>
+                            <select id="business-type" name="business-type" required>
+                                <option value="">Select Business Type</option>
+                                <option value="restaurant" data-lang="business-restaurant">Restaurant</option>
+                                <option value="hotel" data-lang="business-hotel">Hotel</option>
+                                <option value="cafe" data-lang="business-cafe">Café/Bar</option>
+                                <option value="distributor" data-lang="business-distributor">Distributor</option>
+                                <option value="catering" data-lang="business-catering">Catering</option>
+                                <option value="other" data-lang="business-other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-lang="form-message">Message *</label>
+                            <textarea id="message" name="message" required placeholder="Please tell us about your business and product requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-lang="form-submit">Send Inquiry</button>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
-    
-    <footer class="main-footer">
+
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
-                    <h3>AlmaSicily Horeca</h3>
-                    <p>La tua fonte di eccellenze siciliane per il settore Ho.Re.Ca. Prodotti autentici, di alta qualità, consegnati direttamente alla tua attività.</p>
-                    <div class="social-links">
-                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                <div class="footer-section">
+                    <h4 data-lang="footer-company">Company</h4>
+                    <p data-lang="footer-company-text">Almasicily brings authentic Sicilian flavors to the European HORECA market with premium quality products and traditional recipes.</p>
                 </div>
-                <div class="footer-col">
-                    <h3>Link Utili</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="catalogo.html">Catalogo</a></li>
-                        <li><a href="chi-siamo.html">Chi Siamo</a></li>
-                        <li><a href="contatti.html">Contatti</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="termini-condizioni.html">Termini e Condizioni</a></li>
-                    </ul>
+                <div class="footer-section">
+                    <h4 data-lang="footer-products">Products</h4>
+                    <p><a href="#" data-lang="footer-preserves">Preserves & Condiments</a></p>
+                    <p><a href="#" data-lang="footer-vegetables">Preserved Vegetables</a></p>
+                    <p><a href="#" data-lang="footer-dairy">Dairy & Meats</a></p>
+                    <p><a href="#" data-lang="footer-catalog">Product Catalog</a></p>
                 </div>
-                <div class="footer-col">
-                    <h3>Contatti</h3>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> Via Example, 123, 90100 Palermo, Italia</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+39123456789">+39 123 456 789</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@almasicily.com">info@almasicily.com</a></li>
-                        <li><i class="fas fa-clock"></i> Lun-Ven: 9:00-18:00</li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Newsletter</h3>
-                    <p>Iscriviti alla nostra newsletter per restare aggiornato sulle novità e promozioni.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="La tua email" required>
-                        <button type="submit">Iscriviti</button>
-                    </form>
+                <div class="footer-section">
+                    <h4 data-lang="footer-contact">Contact</h4>
+                    <p>Via Armando Diaz, 118<br>92024 Canicattì (AG), Italy</p>
+                    <p>Phone: +39 339 2458190</p>
+                    <p>Email: info@almasicily.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 AlmaSicily Horeca. Tutti i diritti riservati.</p>
-                <div class="payment-methods">
-                    <img src="images/payment-methods.png" alt="Metodi di pagamento">
-                </div>
+                <p data-lang="footer-copyright">&copy; 2024 Almasicily. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
-</body>
-</html>
+    <script>
+        // Language translations
+        const translations = {
+            en: {
+                'nav-home': 'Home',
+                'nav-about': 'About',
+                'nav-products': 'Products',
+                'nav-catalog': 'Catalog',
+                'nav-contact': 'Contact',
+                'hero-title': 'Premium Sicilian Foods for HORECA',
+                'hero-subtitle': 'Authentic flavors from Sicily delivered to restaurants, hotels, and cafes across Europe',
+                'hero-catalog': 'Download Catalog',
+                'hero-contact': 'Get Quote',
+                'about-title': 'Our Story',
+                'about-text1': 'Almasicily was born from a father\'s love - named after Alma, our founder\'s first daughter. When preparing for her weaning in 2015, we realized how difficult it was to find truly genuine, wholesome food.',
+                'about-text2': 'This sparked the creation of a clean, transparent, and reliable company that supports local small producers, organic and sustainable agriculture principles, and slow production methods that preserve both nutritional properties and authentic taste.',
+                'about-text3': 'We bring authentic Sicilian products to your table - products that are exactly what they claim to be and truly come from where they say they come from. That\'s why they\'re naturally better.',
+                'about-image-title': 'From Sicily to Your Kitchen',
+                'about-image-text': 'Authentic ingredients, traditional methods, genuine flavors',
+                'products-title': 'Our Product Categories',
+                'category-preserves': 'Preserves & Condiments',
+                'category-preserves-desc': 'Traditional Sicilian preparations',
+                'category-vegetables': 'Preserved Vegetables',
+                'category-vegetables-desc': 'Premium quality vegetables in oil',
+                'category-dairy': 'Dairy & Meats',
+                'category-dairy-desc': 'Artisanal cheeses and cured meats',
+                'download-title': 'Complete Product Catalog',
+                'download-description': 'Download our comprehensive catalog with detailed product specifications, packaging options, and pricing information for HORECA professionals.',
+                'download-button': 'Download PDF Catalog',
+                'contact-title': 'Get in Touch',
+                'contact-info-title': 'Contact Information',
+                'contact-address-label': 'Address:',
+                'contact-address': 'Via Armando Diaz, 118<br>92024 Canicattì (AG), Italy',
+                'contact-phone-label': 'Phone:',
+                'contact-email-label': 'Email:',
+                'contact-website-label': 'Website:',
+                'form-company': 'Company Name *',
+                'form-name': 'Contact Name *',
+                'form-email': 'Email *',
+                'form-phone': 'Phone',
+                'form-country': 'Country *',
+                'form-business-type': 'Business Type *',
+                'form-message': 'Message *',
+                'form-submit': 'Send Inquiry',
+                'business-restaurant': 'Restaurant',
+                'business-hotel': 'Hotel',
+                'business-cafe': 'Café/Bar',
+                'business-distributor': 'Distributor',
+                'business-catering': 'Catering',
+                'business-other': 'Other',
+                'footer-company': 'Company',
+                'footer-company-text': 'Almasicily brings authentic Sicilian flavors to the European HORECA market with premium quality products and traditional recipes.',
+                'footer-products': 'Products',
+                'footer-preserves': 'Preserves & Condiments',
+                'footer-vegetables': 'Preserved Vegetables',
+                'footer-dairy': 'Dairy & Meats',
+                'footer-catalog': 'Product Catalog',
+                'footer-contact': 'Contact',
+                'footer-copyright':
